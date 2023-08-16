@@ -1,7 +1,8 @@
 # reproduce_compose_text_bug_1.6.0-alpha03
-This is a minimal compose layout to reproduce the bug
-https://issuetracker.google.com/issues/295518534
-https://issuetracker.google.com/issues/295214720
+This is a minimal compose layout to reproduce the bug:
+
+* https://issuetracker.google.com/issues/295518534
+* https://issuetracker.google.com/issues/295214720
 
 ```
 Fatal Exception: java.lang.IllegalArgumentException: no paragraph
