@@ -1,5 +1,9 @@
 # Reproducing Text Rendering Bug in Compose 1.6.0-alpha03
 
+## Bug has been fixed
+
+You can check it in a snapshot version: https://github.com/samoylenkodmitry/reproduce_compose_text_bug_1.6.0-alpha03/tree/snapshot_version
+
 ## Introduction
 
 This article presents a concise layout that reproduces a bug within the Compose framework version 1.6.0-alpha03. The bug is related to rendering text elements within a complex layout structure. Links to the relevant bug reports are provided for further investigation.
