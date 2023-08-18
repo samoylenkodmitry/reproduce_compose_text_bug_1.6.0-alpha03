@@ -1,38 +1,28 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.myapplication.ui.theme.MyApplicationTheme
+import androidx.compose.ui.platform.ComposeView
 import kotlinx.coroutines.delay
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContent {
-			MyApplicationTheme {
-				Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-					Greeting()
-				}
+		setContentView(ComposeView(this).apply {
+			setContent {
+				Greeting()
 			}
-		}
+		})
 	}
 }
 
@@ -51,18 +41,10 @@ fun Greeting() {
 	LazyColumn(state = state) {
 		items(itemsCount) {
 			Box { // <-- crucial for the crash
-				Text(
+				BasicText(
 					text = texts.random()
 				)
 			}
 		}
-	}
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-	MyApplicationTheme {
-		Greeting()
 	}
 }
