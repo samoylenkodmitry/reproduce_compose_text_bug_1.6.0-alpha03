@@ -1,8 +1,8 @@
-# Reproducing Text Rendering Bug in Compose 1.6.0-alpha03
+# Reproducing Text Rendering Bug in Compose (1.6.0-alpha03 and all below)
 
 ## Introduction
 
-This article presents a concise layout that reproduces a bug within the Compose framework version 1.6.0-alpha03. The bug is related to rendering text elements within a complex layout structure. Links to the relevant bug reports are provided for further investigation.
+This article presents a concise layout that reproduces a bug within the Compose framework version 1.6.0-alpha03 (and every version till then). The bug is related to rendering text elements within a complex layout structure. Links to the relevant bug reports are provided for further investigation.
 
 ## Bug Description
 
@@ -65,7 +65,7 @@ fun Greeting() {
 
 ## Conclusion
 
-The provided layout, utilizing the Compose framework version 1.6.0-alpha03, exposes a bug that causes the rendering of text elements to fail when placed within a Box and LazyList combination. By following the reproduction steps, developers can observe the issue and refer to the linked bug reports for further updates and resolutions from the Compose team.
+The provided layout, utilizing the Compose framework version 1.6.0-alpha03 (and every other version below), exposes a bug that causes the rendering of text elements to fail when placed within a Box and LazyList combination. By following the reproduction steps, developers can observe the issue and refer to the linked bug reports for further updates and resolutions from the Compose team.
 
 
 
